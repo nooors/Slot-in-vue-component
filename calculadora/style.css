@@ -1,0 +1,162 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  padding: 0.5rem;
+  width: 40%;
+  min-height: 50%;
+  background-color: #c4c4c4;
+  background: rgb(241, 241, 241);
+  background: linear-gradient(
+    158deg,
+    rgba(241, 241, 241, 1) 13%,
+    rgba(196, 196, 196, 1) 31%,
+    rgba(204, 204, 204, 1) 44%,
+    rgba(244, 244, 244, 1) 59%,
+    rgba(196, 196, 196, 1) 81%
+  );
+  border: 2px solid;
+  border-color: hsl(0, 1%, 40%) hsl(0, 0%, 10%) hsl(0, 0%, 10%) hsl(0, 1%, 40%);
+  box-shadow: 2px 2px 4px black;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "display display display display"
+    "btn-ac btn-plus-minus btn-per-cent btn-divided"
+    "btn-7 btn-8 btn-9 btn-times"
+    "btn-4 btn-5 btn-6 btn-minus"
+    "btn-1 btn-2 btn-3 btn-plus"
+    "btn-0 btn-0 btn-point btn-equal";
+}
+
+@media (min-width: 280px) and (max-width: 450px){
+  .calculator{
+    width: 80vw;
+    height: 90vh;
+  }
+}
+
+.calculator > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  grid-area: display;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.display.content {
+  padding-right: 1rem;
+  height: 3rem;
+  width: 95%;
+  border: 1px solid hsl(0, 0%, 10%);
+  border-radius: 4px;
+  box-shadow: inset 1px 1px 2px hsl(0, 0%, 28%);
+  background-color: rgba(30, 95, 26, 0.4);
+  font-size: 2.5rem;
+}
+
+.btn0 {
+  grid-area: btn-0;
+}
+
+.btn1 {
+  grid-area: btn-1;
+}
+
+.btn2 {
+  grid-area: btn-2;
+}
+
+.btn3 {
+  grid-area: btn-3;
+}
+
+.btn4 {
+  grid-area: btn-4;
+}
+
+.btn5 {
+  grid-area: btn-5;
+}
+
+.btn6 {
+  grid-area: btn-6;
+}
+
+.btn7 {
+  grid-area: btn-7;
+}
+
+.btn8 {
+  grid-area: btn-8;
+}
+
+.btn9 {
+  grid-area: btn-9;
+}
+
+.btn-ac {
+  grid-area: btn-ac;
+}
+
+.btn-plus-minus {
+  grid-area: btn-plus-minus;
+}
+
+.btn-per-cent {
+  grid-area: btn-per-cent;
+}
+
+.btn-divided {
+  grid-area: btn-divided;
+}
+
+.btn-times {
+  grid-area: btn-times;
+}
+
+.btn-minus {
+  grid-area: btn-minus;
+}
+
+.btn-equal {
+  grid-area: btn-equal;
+}
+
+.btn-point {
+  grid-area: btn-point;
+}
+
+/* Buttons style */
+
+button {
+  width: 80%;
+  height: 80%;
+  font-size: 110%;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid;
+  border-color: hsl(0, 1%, 40%) hsl(0, 0%, 10%) hsl(0, 0%, 10%) hsl(0, 1%, 40%);
+  box-shadow: 1px 1px 2px black;
+  border-radius: 4px;
+}
+
+button:active {
+  border: 1px solid black;
+  box-shadow: none;
+}
+
+.btn0 button {
+  width: 90%;
+}
