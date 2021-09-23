@@ -1,3 +1,4 @@
+"use strict";
 // States
 
 // 0 ready to start 1 continue displaying
